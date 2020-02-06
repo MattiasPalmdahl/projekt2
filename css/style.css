@@ -5,13 +5,22 @@
     box-sizing: border-box;
 }
 
-nav {
+header {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     height: 10vh;
-    background-color:black;
+    background-color:white;
     font-family: sans-serif;
+    border-bottom: black solid 7px;
+    position: relative;
+    z-index: 1;
+}
+
+.burger {
+    margin-right: 50px;
+    cursor: pointer;
+    z-index: 1;
 }
 
 .navLinks {
@@ -19,13 +28,15 @@ nav {
     flex-direction: column;
     justify-content: space-around;
     position: absolute;
+    z-index: -1;
     right: 0px;
     height: 90vh;
     top: -90vh;
-    background-color: black;
+    background-color: white;
     align-items: center;
     width: 20%;
     transition: all 1s;
+    border-left: black solid 7px;
 }
 
 .navLinks li {
@@ -33,17 +44,19 @@ nav {
 }
 
 .navLinks a {
-    color: white;
+    color: black;
     text-decoration: none;
+    font-family: monospace;
     letter-spacing: 3px;
     font-weight: bold;
     font-size: 20px;
 }
 
 .burger div {
+    z-index: 1;
     width: 25px;
     height: 3px;
-    background-color: white;
+    background-color: black;
     margin: 5px;
     border-radius: 10%;
     transition: all 0.3s;
@@ -63,4 +76,21 @@ nav {
 
 .navActive {
     transform: translateY(100vh);
+}
+
+img {
+    width: 100vw;
+    height: 90vh;
+    position: relative;
+    z-index: -3;
+}
+
+.instagram {
+width: 50px;
+height: 50px;
+}
+
+.facebook {
+width: 50px;
+height: 50px;
 }
